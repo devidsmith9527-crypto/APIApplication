@@ -1,20 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace APIApplication.Controllers
+namespace APIApplication.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class WelcomeController : ControllerBase
 {
-    [ApiController]
-    [Route("api/Welcome")]
-    public class WelcomeApiController : ControllerBase
+    [HttpGet]
+    public IActionResult Get()
     {
-        [HttpGet]
-        public IActionResult Index()
-        {
-            var response = new { greeting = "Welcome to Web API" };
-            return Ok(response);
-        }
+        var response = new { greeting = "Welcome to Web API" };
+        return Ok(response);
     }
 }
