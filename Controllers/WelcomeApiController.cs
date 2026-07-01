@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace APIApplication.Controllers;
 
-[ApiController]
+[ApiController]// ត្រួតពិនថា Controller នេះគឺជា API Controller
 [Route("api/[controller]")]
 public class WelcomeController : ControllerBase
 {
