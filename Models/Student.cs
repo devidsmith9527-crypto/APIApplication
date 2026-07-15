@@ -10,6 +10,9 @@ namespace APIApplication.Models
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Major { get; set; } = string.Empty;
+        public DateTime DOB { get; set; } = DateTime.Now;
+        public string Email { get; set; } = string.Empty;
+        public string Telegram { get; set; } = string.Empty;
     }
 
 }
