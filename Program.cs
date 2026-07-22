@@ -1,7 +1,17 @@
+using APIApplication.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // 1. Register services for a Web API
 builder.Services.AddControllers(); 
+
+// ១. ចាប់យកខ្សែស្រឡាយតភ្ជាប់ពីឯកសារ appsettings.json
+var connectionString = builder.Configuration.GetConnectionString("LimConnection");
+
+// ២. ចុះឈ្មោះ AppDbContext ទៅក្នុង DI Container ដោយប្រាប់វាឱ្យប្រើ SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(connectionString));
 
 // 2. Configure CORS (Essential for your HTML/JS frontend to connect)
 builder.Services.AddCors(options =>
