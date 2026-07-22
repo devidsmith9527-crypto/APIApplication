@@ -12,14 +12,13 @@ namespace APIApplication.Models
         public string Author { get; set; } = string.Empty;
         public DateTime PublishedDate { get; set; }    
 
-        public Book BindBook(Book book)
+        public Book BindBook(int bookId, string title, string author, DateTime publishedDate)
         {
-            this.BookId = book.BookId;
-            this.Title = book.Title;
-            this.Author = book.Author;
-            this.PublishedDate = book.PublishedDate;
-
+            this.BookId = bookId;
+            this.Title = title;
+            this.Author = author;
+            this.PublishedDate = publishedDate;
             return this;
-        }    
+        }          
     }
 }
