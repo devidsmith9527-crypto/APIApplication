@@ -12,6 +12,7 @@ namespace APIApplication.Data
         }
 
         // ប្រកាស DbSet: Class 'Student' នឹងត្រូវបម្លែងជា Table ឈ្មោះ 'Students'
-        public DbSet<Student> Students { get; set; }
+        public DbSet<Student> students { get; set; }
+        public DbSet<Book> books { get; set; }
     }
 }
