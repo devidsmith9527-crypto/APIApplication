@@ -65,7 +65,7 @@ namespace APIApplication.Controllers
             books.Add(book);
             return Ok(book);
         }
-    }
+    
 
     [HttpDelete("{id}")]
     public IActionResult DeleteBook(int id)
@@ -79,5 +79,5 @@ namespace APIApplication.Controllers
         books.Remove(book);
         return Ok(book);
     }
-
+}
 }
